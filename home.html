@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/icon.svg" type="image/x-icon">
@@ -30,6 +29,7 @@
             padding: 0;
             margin: 0;
         }
+
         .slick-dots li button {
             font-size: 0;
             background: transparent;
@@ -41,6 +41,7 @@
             border-radius: 50%;
             outline: none;
         }
+
         .slick-dots li button::before {
             content: '';
             display: block;
@@ -50,14 +51,23 @@
             background-color: #bbb;
             transition: background-color 0.3s ease;
         }
+
         .slick-dots li.slick-active button::before {
             background-color: #000;
         }
+
         .slick-slide img {
             margin: 0 auto;
             height: 500px;
             object-fit: contain;
         }
+
+        body {
+            font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal
+}
     </style>
 
 </head>
@@ -66,7 +76,7 @@
 
     <div class="py-10 bg-white">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <a href="home.html" class="text-6xl font-pacifico">SwiftCart</a>
+            <a href="home.html" class="text-6xl font-extrabold">SwiftCart</a>
             <form action="search-results.html" method="GET">
                 <div class="flex items-center bg-gray-300 rounded-full px-4 border border-gray-800 border-solid ml-10">
                     <input type="text" name="query" placeholder="Search"
@@ -81,12 +91,18 @@
     </div>
 
     <div class="flex justify-center carousel py-20 carousel-wrapper max-w-4xl mx-auto">
-        <div><a href="product-detail.html?productId=10" target="_blank"><img src="/assets/banner1.jpg" alt="Banner1"></a></div>
-        <div><a href="product-detail.html?productId=14" target="_blank"><img src="/assets/banner2.jpg" alt="Banner2"></a></div>
-        <div><a href="product-detail.html?productId=12" target="_blank"><img src="/assets/banner3.jpg" alt="Banner3"></a></div>
-        <div><a href="product-detail.html?productId=1" target="_blank"><img src="/assets/banner4.jpg" alt="Banner4"></a></div>
-        <div><a href="product-detail.html?productId=5" target="_blank"><img src="/assets/banner5.jpg" alt="Banner5"></a></div>
-        <div><a href="product-detail.html?productId=13" target="_blank"><img src="/assets/banner6.jpg" alt="Banner6"></a></div>
+        <div><a href="product-detail.html?productId=10" target="_blank"><img src="/assets/banner1.jpg"
+                    alt="Banner1"></a></div>
+        <div><a href="product-detail.html?productId=14" target="_blank"><img src="/assets/banner2.jpg"
+                    alt="Banner2"></a></div>
+        <div><a href="product-detail.html?productId=12" target="_blank"><img src="/assets/banner3.jpg"
+                    alt="Banner3"></a></div>
+        <div><a href="product-detail.html?productId=1" target="_blank"><img src="/assets/banner4.jpg" alt="Banner4"></a>
+        </div>
+        <div><a href="product-detail.html?productId=5" target="_blank"><img src="/assets/banner5.jpg" alt="Banner5"></a>
+        </div>
+        <div><a href="product-detail.html?productId=13" target="_blank"><img src="/assets/banner6.jpg"
+                    alt="Banner6"></a></div>
     </div>
 
 
@@ -122,7 +138,8 @@
                     <select id="price" name="price"
                         class="bg-gray-300 rounded-full px-2 py-1 text-center border-4 border-solid border-gray-900">
                         <option value="">Any</option>
-                        <option value="<50"><$50</option>
+                        <option value="<50">
+                            <$50< /option>
                         <option value="50-100">$50 - $100</option>
                         <option value="100-500">$100 - $500</option>
                         <option value="500-1000">$500 - $1000</option>

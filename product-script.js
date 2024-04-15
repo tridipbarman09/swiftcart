@@ -277,7 +277,7 @@ function displayProductDetail(product) {
     // Title
     const title = document.createElement('h2');
     title.textContent = product.title;
-    title.classList.add('text-xl', 'font-bold');
+    title.classList.add('text-5xl', 'font-bold');
     productDescriptionContainer.appendChild(title);
 
     // Rating
@@ -296,19 +296,20 @@ function displayProductDetail(product) {
     }
     const ratingText = document.createElement('span');
     ratingText.textContent = `${product.rating.rate} (${product.rating.count} reviews)`;
+    rating.classList.add('text-lg');
     rating.appendChild(ratingText);
     productDescriptionContainer.appendChild(rating);
 
     // Price
     const price = document.createElement('p');
     price.textContent = `Price: $${product.price}`;
-    price.classList.add('text-lg', 'font-semibold', 'text-gray-800');
+    price.classList.add('text-xl', 'font-semibold', 'text-gray-800');
     productDescriptionContainer.appendChild(price);
 
     // Description
     const description = document.createElement('p');
     description.textContent = product.description;
-    description.classList.add('text-sm', 'text-gray-600');
+    description.classList.add('text-lg', 'text-gray-600');
     productDescriptionContainer.appendChild(description);
 
     // Append product description container to product info container
