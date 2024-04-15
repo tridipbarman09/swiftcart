@@ -255,33 +255,28 @@ function findProductById(id) {
 
 function displayProductDetail(product) {
     const productDetailContainer = document.getElementById('productDetail');
-    productDetailContainer.innerHTML = ''; // Clear previous content
+    productDetailContainer.innerHTML = '';
 
     document.title = product.title + ' - SwiftCart';
 
-    // Create a container for the product image and information
     const productInfoContainer = document.createElement('div');
     productInfoContainer.classList.add('flex', 'items-center', 'space-x-4', 'p-4');
 
-    // Product image
     const img = document.createElement('img');
     img.src = product.image;
     img.alt = product.title;
-    img.classList.add('w-64', 'ml-40', 'mr-40', 'mix-blend-multiply'); // Adjust the width as needed
+    img.classList.add('w-64', 'ml-40', 'mr-40', 'mix-blend-multiply');
     productInfoContainer.appendChild(img);
 
-    // Create a container for the title, rating, price, and description
     const productDescriptionContainer = document.createElement('div');
     productDescriptionContainer.classList.add('flex', 'flex-col', 'gap-2',);
 
-    // Title
-    const title = document.createElement('h2');
+   const title = document.createElement('h2');
     title.textContent = product.title;
     title.classList.add('text-5xl', 'font-bold');
     productDescriptionContainer.appendChild(title);
 
-    // Rating
-    const rating = document.createElement('div');
+   const rating = document.createElement('div');
     rating.classList.add('flex', 'items-center');
     for (let i = 0; i < 5; i++) {
         const star = document.createElement('i');
@@ -300,22 +295,19 @@ function displayProductDetail(product) {
     rating.appendChild(ratingText);
     productDescriptionContainer.appendChild(rating);
 
-    // Price
     const price = document.createElement('p');
     price.textContent = `Price: $${product.price}`;
     price.classList.add('text-xl', 'font-semibold', 'text-gray-800', 'mt-5');
     productDescriptionContainer.appendChild(price);
 
-    // Description
     const description = document.createElement('p');
     description.textContent = product.description;
     description.classList.add('text-lg', 'text-gray-600', 'mt-10', 'mb-20');
     productDescriptionContainer.appendChild(description);
 
-    // Append product description container to product info container
     productInfoContainer.appendChild(productDescriptionContainer);
 
-    // Append product info container to main container
+    
     productDetailContainer.appendChild(productInfoContainer);
 }
 

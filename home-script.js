@@ -244,7 +244,7 @@ data = [
 $(document).ready(function(){
     $('.carousel').slick({
         autoplay: true,
-        autoplaySpeed: 1000, // Change slide every 5 seconds
+        autoplaySpeed: 1000,
         arrows: true,
         prevArrow: '<button class="slick-prev bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center" aria-label="Previous">&lt;</button>',
         nextArrow: '<button class="slick-next bg-gray-500 text-white rounded-full w-10 h-10 flex items-center justify-center" aria-label="Next">&gt;</button>',
