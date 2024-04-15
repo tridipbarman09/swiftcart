@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/icon.svg" type="image/x-icon">
+    <title>SwiftCart - A one-stop solution for all shopping needs.</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        .slick-dots li button {
+            font-size: 0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            outline: none;
+        }
+        .slick-dots li button::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #bbb;
+            transition: background-color 0.3s ease;
+        }
+        .slick-dots li.slick-active button::before {
+            background-color: #000;
+        }
+        .slick-slide img {
+            margin: 0 auto;
+            height: 500px;
+            object-fit: contain;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-300 overflow-x-hidden">
+
+    <div class="py-10 bg-white">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <a href="home.html" class="text-6xl font-pacifico">SwiftCart</a>
+            <form action="search-results.html" method="GET">
+                <div class="flex items-center bg-gray-300 rounded-full px-4 border border-gray-800 border-solid ml-10">
+                    <input type="text" name="query" placeholder="Search"
+                        class="py-2 px-2 focus:outline-none rounded-l-lg text-black border-none w-80 bg-gray-300">
+                    <button type="submit"
+                        class="px-2 focus:outline-none transition-transform duration-300 transform hover:scale-150">
+                        <img src="/assets/magnifying-glass.svg" alt="Search" class="h-6 w-6">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="flex justify-center carousel py-20 carousel-wrapper max-w-4xl mx-auto">
+        <div><a href="product-detail.html?productId=10" target="_blank"><img src="/assets/banner1.jpg" alt="Banner1"></a></div>
+        <div><a href="product-detail.html?productId=14" target="_blank"><img src="/assets/banner2.jpg" alt="Banner2"></a></div>
+        <div><a href="product-detail.html?productId=12" target="_blank"><img src="/assets/banner3.jpg" alt="Banner3"></a></div>
+        <div><a href="product-detail.html?productId=1" target="_blank"><img src="/assets/banner4.jpg" alt="Banner4"></a></div>
+        <div><a href="product-detail.html?productId=5" target="_blank"><img src="/assets/banner5.jpg" alt="Banner5"></a></div>
+        <div><a href="product-detail.html?productId=13" target="_blank"><img src="/assets/banner6.jpg" alt="Banner6"></a></div>
+    </div>
+
+
+    <h2 class="text-4xl font-bold mb-2 mt-2 text-center">Featured Products</h2>
+    <div class="container mx-auto my-8 px-6 flex">
+        <div class="w-1/4 bg-gray-400 rounded-lg p-2 mr-8 max-h-44 flex-col">
+            <div class="flex flex-col space-y-4 mt-2 mb-2">
+                <div class="flex items-center ">
+                    <label for="category" class="mr-2">Category:</label>
+                    <select id="category" name="category "
+                        class="bg-gray-300 rounded-full px-2 py-1 text-center border-4 border-solid border-gray-900">
+                        <option value="">All</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="men's clothing">Men's Clothing</option>
+                        <option value="women's clothing">Women's Clothing</option>
+                        <option value="jewelery">Jewelery</option>
+                    </select>
+                </div>
+                <div class="flex items-center">
+                    <label for="rating" class="mr-2">Rating:</label>
+                    <select id="rating" name="rating"
+                        class="bg-gray-300 rounded-full px-2 py-1 text-center border-4 border-solid border-gray-900">
+                        <option value="">Any</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars & Above</option>
+                        <option value="3">3 Stars & Above</option>
+                        <option value="2">2 Stars & Above</option>
+                        <option value="1">1 Star & Above</option>
+                    </select>
+                </div>
+                <div class="flex items-center">
+                    <label for="price" class="mr-2">Price Range:</label>
+                    <select id="price" name="price"
+                        class="bg-gray-300 rounded-full px-2 py-1 text-center border-4 border-solid border-gray-900">
+                        <option value="">Any</option>
+                        <option value="<50"><$50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100-500">$100 - $500</option>
+                        <option value="500-1000">$500 - $1000</option>
+                        <option value="1000+">$1000+</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="productcontainer" class="grid grid-cols-3 gap-8 w-5/6 mx-auto"></div>
+    </div>
+
+    <div class="bg-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8 text-center text-white">About Us</h2>
+            <p class="text-lg text-white">
+                SwiftCart is your one-stop solution for all your shopping needs. With a wide range of products
+                including electronics, clothing, jewelry, and more, we strive to provide the best shopping experience
+                for our customers. Our mission is to offer quality products at affordable prices, making shopping
+                convenient and enjoyable for everyone.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script src="home-script.js"></script>
+
+</html>
