@@ -267,12 +267,12 @@ function displayProductDetail(product) {
     const img = document.createElement('img');
     img.src = product.image;
     img.alt = product.title;
-    img.classList.add('w-64', 'ml-40', 'mr-40', 'mt-10', 'mix-blend-multiply'); // Adjust the width as needed
+    img.classList.add('w-64', 'ml-40', 'mr-40', 'mix-blend-multiply'); // Adjust the width as needed
     productInfoContainer.appendChild(img);
 
     // Create a container for the title, rating, price, and description
     const productDescriptionContainer = document.createElement('div');
-    productDescriptionContainer.classList.add('flex', 'flex-col', 'gap-2');
+    productDescriptionContainer.classList.add('flex', 'flex-col', 'gap-2',);
 
     // Title
     const title = document.createElement('h2');
@@ -296,20 +296,20 @@ function displayProductDetail(product) {
     }
     const ratingText = document.createElement('span');
     ratingText.textContent = `${product.rating.rate} (${product.rating.count} reviews)`;
-    rating.classList.add('text-lg');
+    rating.classList.add('text-lg', 'mt-5');
     rating.appendChild(ratingText);
     productDescriptionContainer.appendChild(rating);
 
     // Price
     const price = document.createElement('p');
     price.textContent = `Price: $${product.price}`;
-    price.classList.add('text-xl', 'font-semibold', 'text-gray-800');
+    price.classList.add('text-xl', 'font-semibold', 'text-gray-800', 'mt-5');
     productDescriptionContainer.appendChild(price);
 
     // Description
     const description = document.createElement('p');
     description.textContent = product.description;
-    description.classList.add('text-lg', 'text-gray-600');
+    description.classList.add('text-lg', 'text-gray-600', 'mt-10', 'mb-20');
     productDescriptionContainer.appendChild(description);
 
     // Append product description container to product info container
