@@ -241,6 +241,7 @@ data = [
     }
 ]
 
+const no_results = document.getElementById('no-search-results');
 
 function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -315,10 +316,18 @@ function renderSearchResults(items) {
     const search_results = document.getElementById('search_results');
     search_results.innerHTML = '';
 
-    items.forEach(item => {
-        const productItem = renderProductItem(item);
-        search_results.appendChild(productItem);
-    });
+    if (items.length === 0) {
+        const noResultsMessage = document.createElement('h1');
+        noResultsMessage.textContent = 'No search results found.';
+        noResultsMessage.classList.add('text-4xl', 'font-bold', 'text-gray-600', 'py-8', 'mt-8', 'mb-4', 'flex', 'justify-center', 'items-center', 'h-full');
+        no_results.appendChild(noResultsMessage);
+    
+    } else {
+        items.forEach(item => {
+            const productItem = renderProductItem(item);
+            search_results.appendChild(productItem);
+        });
+    }
 }
 
 
